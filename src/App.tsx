@@ -1,14 +1,9 @@
-import './App.css'
-
-function App() {
-
+export function App() {
   return (
     <>
-      <div>
+      <div className="min-h-dvh  bg-zinc-950">
         <h1>Meu Portifolio</h1>
       </div>
     </>
-  )
+  );
 }
-
-export default App
