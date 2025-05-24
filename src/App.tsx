@@ -1,8 +1,10 @@
+import { NavBar } from "./components";
+
 export function App() {
   return (
     <>
-      <div className="min-h-dvh  bg-zinc-950">
-        <h1>Meu Portifolio</h1>
+      <div className="box-border min-h-dvh  bg-zinc-950">
+        <NavBar />
       </div>
     </>
   );
