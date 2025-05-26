@@ -1,11 +1,12 @@
-import { NavBar } from "./components";
+import { NavBar, Presentation } from "./components";
 
 export function App() {
   return (
-    <>
-      <div className="box-border min-h-dvh  bg-zinc-950">
+    <div className="min-w-dvw">
+      <div className="box-border min-h-dvh  m-auto ">
         <NavBar />
+        <Presentation />
       </div>
-    </>
+    </div>
   );
 }
