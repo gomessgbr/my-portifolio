@@ -1,5 +1,5 @@
 import { GetReposUseCase } from "../useCases/getRepos";
-import { Card } from "./ui/cards";
+import { Card } from "./ui/card";
 
 export function Projects() {
   const { repos } = GetReposUseCase();
