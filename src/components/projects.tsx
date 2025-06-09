@@ -10,8 +10,12 @@ export function Projects() {
       <div>
         {repos &&
           repos.length > 0 &&
-          repos.map(({ name, description }) => (
-            <Card name={name} details={description || ""} />
+          repos.map(({ name, description }, index) => (
+            <Card
+              key={`${index} + ${name}`}
+              name={name}
+              details={description || ""}
+            />
           ))}
       </div>
     </div>
