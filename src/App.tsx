@@ -1,4 +1,4 @@
-import { About, NavBar, Presentation, Projects } from "./components";
+import { About, NavBar, Presentation, Projects, Skills } from "./components";
 import "./style.css";
 
 export function App() {
@@ -9,6 +9,7 @@ export function App() {
         <Presentation />
         <About />
         <Projects />
+        <Skills />
       </div>
     </div>
   );
