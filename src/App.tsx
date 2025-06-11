@@ -1,4 +1,11 @@
-import { About, NavBar, Presentation, Projects, Skills } from "./components";
+import {
+  About,
+  Footer,
+  NavBar,
+  Presentation,
+  Projects,
+  Skills,
+} from "./components";
 import "./style.css";
 
 export function App() {
@@ -10,6 +17,7 @@ export function App() {
         <About />
         <Projects />
         <Skills />
+        <Footer />
       </div>
     </div>
   );
