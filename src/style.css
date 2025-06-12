@@ -8,3 +8,11 @@
 body {
   font-family: "Nunito", sans-serif;
 }
+h1,
+h2,
+h3,
+span,
+p,
+strong {
+  color: #ffff;
+}
