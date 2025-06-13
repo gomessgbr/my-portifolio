@@ -1,11 +1,20 @@
 export function Skills() {
   return (
-    <div className="bg-zinc-800 p-8">
-      <h2>Habilidades</h2>
+    <div className="grid gap-10 p-8">
+      <h2 className="w-full text-center text-5xl font-semibold pb-8">
+        Habilidades
+      </h2>
       <div className="grid grid-cols-6 gap-6">
         {tecSkills.map((skill) => (
-          <div key={skill.name} className="flex flex-col items-center">
-            <img src={skill.icon} alt={skill.name} className="w-46 h-46" />
+          <div
+            key={skill.name}
+            className="flex flex-col items-center justify-center gap-6 bg-[#1B1B1B] border-2 border-[#4169E1] rounded-3xl w-44 h-44"
+          >
+            <img
+              src={skill.icon}
+              alt={skill.name}
+              className="max-w-20 max-h-20 object-center"
+            />
             <span className="text-white">{skill.name}</span>
           </div>
         ))}
@@ -22,74 +31,77 @@ interface ItecSkills {
 const tecSkills: ItecSkills[] = [
   {
     name: "React",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/500px-React-icon.svg.png",
+    icon: "/icons/icon_react.svg",
   },
   {
     name: "React Native",
-    icon: "https://miro.medium.com/v2/resize:fit:1024/1*QY5S4senfFh-mIViSi5A_Q.png",
-  },
-  {
-    name: "Next.js",
-    icon: "https://nextjs.org/static/favicon/favicon.ico",
-  },
-  {
-    name: "Expo",
-    icon: "https://docs.expo.dev/static/images/expo-logo.svg",
+    icon: "/icons/icon_rn.svg",
   },
   {
     name: "TypeScript",
-    icon: "https://www.typescriptlang.org/assets/images/icons/ts-logo.svg",
-  },
-  {
-    name: "Node.js",
-    icon: "https://nodejs.org/static/images/logo.svg",
-  },
-  {
-    name: "Redux",
-    icon: "https://redux.js.org/logo/logo.png",
-  },
-  {
-    name: "NestJS",
-    icon: "https://nestjs.com/img/logo-small.svg",
-  },
-  {
-    name: "Zustand",
-    icon: "https://raw.githubusercontent.com/pmndrs/zustand/main/docs/logo.png",
+    icon: "/icons/icon_typescript.svg",
   },
   {
     name: "JavaScript",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
-  },
-  {
-    name: "Sass",
-    icon: "https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg",
+    icon: "/icons/icon_javascript.svg",
   },
   {
     name: "Git",
-    icon: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
+    icon: "/icons/icon_git.svg",
+  },
+
+  {
+    name: "Zustand",
+    icon: "/icons/icon_zustand.svg",
   },
   {
-    name: "Python",
-    icon: "https://www.python.org/community/logos/python-logo-master-v3-TM.png",
+    name: "Next.js",
+    icon: "/icons/icon_nextjs.svg",
   },
   {
-    name: "Cypress",
-    icon: "https://www.cypress.io/favicon.ico",
+    name: "Sass",
+    icon: "/icons/icon_sass.svg",
+  },
+
+  {
+    name: "Expo",
+    icon: "/icons/icon_expo.svg",
   },
   {
-    name: "Java",
-    icon: "https://upload.wikimedia.org/wikipedia/en/3/30/Java_logo_and_wordmark.svg",
+    name: "Node.js",
+    icon: "/icons/icon_node.svg",
+  },
+  {
+    name: "Redux",
+    icon: "/icons/icon_redux.svg",
+  },
+  {
+    name: "NestJS",
+    icon: "/icons/icon_nest.svg",
+  },
+  {
+    name: "Jest",
+    icon: "/icons/icon_jest.svg",
   },
   {
     name: "PostgreSQL",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/500px-Postgresql_elephant.svg.png",
+    icon: "/icons/icon_postgresql.svg",
   },
   {
     name: "MongoDB",
-    icon: "https://www.mongodb.com/assets/images/global/favicon.ico",
+    icon: "/icons/icon_mongodb.svg",
   },
   {
     name: "Docker",
-    icon: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png",
+    icon: "/icons/icon_docker.svg",
+  },
+  {
+    name: "Cypress",
+    icon: "/icons/icon_cypress.svg",
+  },
+
+  {
+    name: "Java",
+    icon: "/icons/icon_java.svg",
   },
 ];
