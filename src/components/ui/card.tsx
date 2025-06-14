@@ -2,33 +2,36 @@ interface ICardProps {
   name: string;
   details?: string;
   tags?: string[];
-  preset?: "sm" | "md";
+
   icon?: string;
 }
 
-export function Card({ name, details, icon, preset = "md", tags }: ICardProps) {
+export function Card({ name, details, icon, tags }: ICardProps) {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg text-white">
-      <img
-        className="w-full"
-        src="/img/card-top.jpg"
-        alt="Sunset in the mountains"
-      />
-      <div className="px-6 py-4">
-        <span className="font-bold text-xl mb-2">{name}</span>
-        {details && <p className="text-gray-700 text-base">{details}</p>}
+    <div className="w-[384px] h-[327px] bg-[#0B0B0B] rounded-lg border border-[#4169E1] flex flex-col justify-between p-4 hover:scale-[1.02] transition-transform">
+      <div className="w-full h-[160px] bg-[#4169E1] rounded-md overflow-hidden mb-4">
+        <img
+          className="w-full h-full object-cover"
+          src={icon || "/img/card-top.jpg"}
+          alt={name}
+        />
       </div>
-      {/* <div className="px-6 pt-4 pb-2">
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #
-        </span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #travel
-        </span>
-        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #winter
-        </span>
-      </div> */}
+
+      <div className="text-white">
+        <h3 className="font-semibold text-lg">{name}</h3>
+        {details && <p className="text-sm text-gray-300 mt-1">{details}</p>}
+      </div>
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        {tags?.map((tag) => (
+          <span
+            key={tag}
+            className="bg-gray-700 text-white text-xs px-3 py-1 rounded-full"
+          >
+            #{tag}
+          </span>
+        ))}
+      </div>
     </div>
   );
 }

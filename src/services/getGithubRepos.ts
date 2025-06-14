@@ -14,7 +14,7 @@ export interface GitHubRepository {
 
 export async function getUserRepositories(): Promise<GitHubRepository[]> {
   const response = await fetch(
-    `https://api.github.com/users/${USER_GIT_HUB}/repos?per_page=10&sort=full_name
+    `https://api.github.com/users/${USER_GIT_HUB}/repos?sort=pushed&direction=desc
 `
   );
   if (!response.ok) {
@@ -23,6 +23,6 @@ export async function getUserRepositories(): Promise<GitHubRepository[]> {
 
   const data: GitHubRepository[] = await response.json();
 
-  // Filtra apenas repositórios públicos e não forkados, se desejar
-  return data.filter((repo) => !repo.fork);
+  // Filtra apenas repositórios públicos e não forkados, e o id desse projeto aqui
+  return data.filter(({ fork, id }) => !fork && id !== 963553902);
 }
