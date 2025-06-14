@@ -1,6 +1,6 @@
 export function Presentation() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center gap-8 px-4 text-white ">
+    <section className="flex flex-col items-center justify-center gap-8 px-4 text-white ">
       <div className="text-center space-y-4">
         <p className="text-3xl font-medium">
           Olá, meu nome é{" "}
