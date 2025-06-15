@@ -2,17 +2,16 @@ interface ICardProps {
   name: string;
   details?: string;
   tags?: string[];
-
-  icon?: string;
+  preview?: string;
 }
 
-export function Card({ name, details, icon, tags }: ICardProps) {
+export function Card({ name, details, preview, tags }: ICardProps) {
   return (
     <div className="w-[384px] h-[327px] bg-[#0B0B0B] rounded-lg border border-[#4169E1] flex flex-col justify-between p-4 hover:scale-[1.02] transition-transform">
       <div className="w-full h-[160px] bg-[#4169E1] rounded-md overflow-hidden mb-4">
         <img
           className="w-full h-full object-cover"
-          src={icon || "/img/card-top.jpg"}
+          src={preview || "/img/card-top.jpg"}
           alt={name}
         />
       </div>
