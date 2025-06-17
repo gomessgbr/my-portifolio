@@ -21,7 +21,7 @@ export function Card({ name, details, preview, tags }: ICardProps) {
         {details && <p className="text-sm text-gray-300 mt-1">{details}</p>}
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-2">
+      <div className="mt-4 flex flex-wrap gap-3">
         {tags?.map((tag) => (
           <span
             key={tag}
