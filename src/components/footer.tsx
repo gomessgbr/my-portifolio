@@ -1,9 +1,10 @@
 import { Github, Mail, Linkedin } from "lucide-react";
 import { ReactElement } from "react";
+import { Title } from "./ui/title";
 export function Footer() {
   return (
     <footer className="w-full min-h-36 grid place-items-center gap-10 p-10">
-      <h2 className="font-semibold text-5xl">Contatos</h2>
+      <Title text="Contato" />
       <div className="flex gap-4">
         {infoValues.map((infos, index) => (
           <a
