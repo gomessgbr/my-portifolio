@@ -1,9 +1,9 @@
+import { Title } from "./ui/title";
+
 export function Skills() {
   return (
     <div className="grid gap-10 p-8">
-      <h2 className="w-full text-center text-5xl font-semibold pb-8">
-        Habilidades
-      </h2>
+      <Title text="Habilidades" />
       <div className="grid grid-cols-6 gap-6">
         {tecSkills.map((skill) => (
           <div
