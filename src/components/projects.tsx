@@ -1,5 +1,6 @@
 import { GetReposUseCase } from "../useCases/getRepos";
 import { Card } from "./ui/card";
+import { Title } from "./ui/title";
 
 export function Projects() {
   const { repos } = GetReposUseCase();
@@ -7,7 +8,7 @@ export function Projects() {
 
   return (
     <div className="grid gap-y-20 ">
-      <h2 className="font-semibold text-5xl">Meus projetos</h2>
+      <Title text="Meus projetos" />
       <div className="grid grid-cols-3 gap-x-8 gap-y-10">
         {repos &&
           repos.length > 0 &&
