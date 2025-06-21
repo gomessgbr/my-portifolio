@@ -12,11 +12,13 @@ export function Projects() {
       <div className="grid grid-cols-3 gap-x-8 gap-y-10">
         {repos &&
           repos.length > 0 &&
-          repos.map(({ name, description }, index) => (
+          repos.map(({ name, description, html_url, id }) => (
             <Card
-              key={`${index} + ${name}`}
+              key={id.toString()}
               name={name}
               details={description || ""}
+              url={html_url}
+              id={id}
             />
           ))}
       </div>
